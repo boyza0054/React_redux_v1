@@ -24,10 +24,12 @@ class Item extends Component {
   }
 
   deleteItem = () => {
-    this.props.dispatch({
-      type: "DELETE_TODO",
-      id: this.props.id
-    });
+    if (window.confirm('Are you sure you want to delete ?')) {
+      this.props.dispatch({
+        type: "DELETE_TODO",
+        id: this.props.id
+      });
+    }
   }
 
   UpdateItem = (event) => {
