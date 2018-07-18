@@ -3,7 +3,7 @@ const TodoReducer = (state = [], action) => {
         case "GET_DATA":
             return state.concat(action.data)
         case "SET_DATA":
-            localStorage.setItem('Session_todo', JSON.stringify(state));
+            localStorage.setItem('Session_todolist', JSON.stringify(state));
             return state;
         case "ADD_TODO":
             return state.concat([action.data])

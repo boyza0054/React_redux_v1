@@ -17,7 +17,7 @@ class TodoList extends Component {
   }
 
   componentWillMount() {
-    const data = JSON.parse(localStorage.getItem('Session_todo'));
+    const data = JSON.parse(localStorage.getItem('Session_todolist'));
     if (data) {
       this.props.dispatch({
         type: "GET_DATA",
